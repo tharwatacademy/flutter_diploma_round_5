@@ -93,6 +93,9 @@ class _ChatInputFieldState extends State<ChatInputField> {
   }
 
   sendMessage(String text) {
+    if (context.read<SendMessageCubit>().state is SendMessageFailure) {
+      widget.messages.removeLast();
+    }
     widget.messages.add(
       MessageModel(
         parts: [MessagePart(text: text)],

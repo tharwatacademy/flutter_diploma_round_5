@@ -117,9 +117,9 @@ class _ChatPageState extends State<ChatPage> {
                     ScaffoldMessenger.of(
                       context,
                     ).showSnackBar(SnackBar(content: Text(state.errMesasge)));
-                    Future.delayed(const Duration(milliseconds: 200), () {
-                      messages.removeLast();
-                    });
+                    // Future.delayed(const Duration(milliseconds: 200), () {
+                    //   messages.removeLast();
+                    // });
                   }
                 },
                 builder: (context, state) {

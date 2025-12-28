@@ -22,7 +22,7 @@ class ChatService {
       );
 
       var messageModel = MessageModel.fromJson(
-        response.data['candidates'][0][""],
+        response.data['candidates'][0]["parts"][0],
       );
       return messageModel;
     } on DioException catch (e) {

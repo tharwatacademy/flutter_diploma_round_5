@@ -227,6 +227,7 @@ class FailureChatBubble extends StatelessWidget {
                     const SizedBox(height: 8),
                     InkWell(
                       onTap: () {
+                        messages.removeLast();
                         messages.add(
                           MessageModel(
                             role: 'user',
