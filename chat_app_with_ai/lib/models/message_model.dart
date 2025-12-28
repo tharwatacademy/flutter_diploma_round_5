@@ -9,9 +9,10 @@ class MessageModel {
   factory MessageModel.fromJson(Map<String, dynamic> json) {
     return MessageModel(
       role: json["role"],
-      parts: (json["parts"] as List)
-          .map((part) => MessagePart.fromJson(part))
-          .toList(),
+      parts:
+          (json["parts"] as List) // list<Map>
+              .map((part) => MessagePart.fromJson(part))
+              .toList(), // List<MessagePart>,
     );
   }
 

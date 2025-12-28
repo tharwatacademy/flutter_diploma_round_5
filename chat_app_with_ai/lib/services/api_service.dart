@@ -13,6 +13,10 @@ class ApiService {
     Map<String, dynamic>? data,
     headers,
   }) async {
-    return await _dio.post(url, data: data);
+    return await _dio.post(
+      url,
+      data: data,
+      options: Options(headers: headers),
+    );
   }
 }
